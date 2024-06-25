@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
   return (
     <Fragment>
       <motion.nav
-        className="flex justify-center z-50 my-5"
+        className="flex justify-center z-50 fixed top-0 left-0 right-0 mt-3"
         variants={containerNavbar}
         initial="hidden"
         animate="visible"
@@ -43,11 +43,10 @@ const Navbar: React.FC = () => {
               duration={500}
               spy={true}
               smooth={true}
-              className={`${
-                activeNav === navigate_url
+              className={`${activeNav === navigate_url
                   ? "text-[#2c848f] font-semibold"
                   : "text-primary/50 font-medium"
-              } cursor-pointer hover:text-[#2d6e77]`}
+                } cursor-pointer hover:text-[#2d6e77]`}
               onSetActive={() => setActiveNav(navigate_url)}
             >
               {navigate}
@@ -64,9 +63,8 @@ const Navbar: React.FC = () => {
         </button>
       </div>
       <div
-        className={`${
-          isNavbarResponsive ? "right-0 " : "-right-full"
-        } lg:hidden fixed top-0 bg-[#FBFDFF] w-full h-screen transition-all duration-300 ease-out z-50`}
+        className={`${isNavbarResponsive ? "right-0 " : "-right-full"
+          } lg:hidden fixed top-0 bg-[#FBFDFF] w-full h-screen transition-all duration-300 ease-out z-50`}
       >
         <div className="mx-5 text-sky-800 font-extrabold text-2xl italic fixed top-7">KIGAMEKUN.</div>
         <div className="w-full h-screen flex flex-col justify-center items-center gap-10 lg:text-base text-sm">
@@ -78,11 +76,10 @@ const Navbar: React.FC = () => {
               duration={500}
               spy={true}
               smooth={true}
-              className={`${
-                activeNav === navigate_url
+              className={`${activeNav === navigate_url
                   ? "text-primary/90 font-semibold"
                   : "hover:text-primary text-primary/50 cursor-pointer font-medium"
-              }`}
+                }`}
               onClick={handleResponsive}
               onSetActive={() => setActiveNav(navigate_url)}
             >
