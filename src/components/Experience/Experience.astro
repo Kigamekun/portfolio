@@ -1,0 +1,35 @@
+---
+import shapeLight from "../../assets/images/shape-experience.svg";
+import vectorExperience from "../../assets/icons/vector-experience.svg";
+
+import DataExperience from "./DataExperience";
+---
+
+<section id="experience" class="bg-gradient-to-b from-[#0E1F2A] to-[#111721]">
+  <div class="max-w-7xl m-auto px-5 py-14">
+    <div class="flex justify-center flex-col items-center gap-5">
+      <div class="relative md:w-[580px] w-[307px]">
+        <img
+          src={shapeLight}
+          decoding="async"
+          loading="lazy"
+          alt="about shape kigamekun"
+          class="absolute bottom-2 xl:w-auto md:w-56 w-48"
+        />
+        <h2 class="relative z-10 md:text-[56px] text-[30px] md:text-left font-bold">🏢 Work Experiences</h2>
+        <img
+          src={vectorExperience}
+          decoding="async"
+          loading="lazy"
+          alt="projects shape kigamekun"
+          class="absolute top-0 md:right-0 -right-1 md:w-12 w-6"
+        />
+      </div>
+      <p class="xl:text-2xl md:text-base text-sm xl:leading-9 text-center text-medium xl:max-w-[65rem] text-[#98A0AC]">
+        As a dedicated Fullstack Developer, I have had the privilege of working on various projects that have honed my skills and enriched my experience. Here are some of the key milestones in my professional journey.
+      </p>
+    </div>
+
+    <DataExperience client:visible />
+  </div>
+</section>

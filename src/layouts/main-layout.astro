@@ -1,0 +1,61 @@
+---
+const { title } = Astro.props;
+import Navbar from "../components/Header/Navbar";
+import ArrowTop from "../components/ArrowTop/ArrowTop";
+import { SEO } from "astro-seo";
+---
+
+<html lang="en">
+  <head>
+    <SEO
+      title={title}
+      description="2+ years of experience, using React.js and TypeScript for developing a website and web applications."
+      openGraph={{
+        basic: {
+          title: "Reksa prayoga Syahputra - Fullstack Developer",
+          type: "website",
+          image:
+            "https://media.licdn.com/dms/image/D5603AQE4v1D9ALFH3Q/profile-displayphoto-shrink_400_400/0/1685120536769?e=1695859200&v=beta&t=0U7MMccAyKPdtvn98VV2ajuhAHymEjA5Ly1vr6MG1Vs",
+        },
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/logo.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content:
+              "https://media.licdn.com/dms/image/D5603AQE4v1D9ALFH3Q/profile-displayphoto-shrink_400_400/0/1685120536769?e=1695859200&v=beta&t=0U7MMccAyKPdtvn98VV2ajuhAHymEjA5Ly1vr6MG1Vs",
+          },
+          {
+            name: "twitter:title",
+            content: "Reksa prayoga Syahputra - Fullstack Developer",
+          },
+          {
+            name: "twitter:description",
+            content:
+              "Fullstack Developer with 3+ years of experience in Laravel for developing a website and web applications",
+          },
+        ],
+      }}
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta title={title} />
+    <link rel="icon" type="image/x-icon" href="/logo.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#FBFDFF]">
+    <main class="max-w-7xl mx-auto font-figtree text-primary-black">
+      <div class="m-5">
+        <Navbar client:load />
+        <ArrowTop client:load />
+        <slot />
+      </div>
+    </main>
+  </body>
+</html>

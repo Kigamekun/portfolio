@@ -1,0 +1,101 @@
+@media only screen and (max-width: 600px) {
+    .one {
+        grid-area: 1 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .two {
+        grid-area: 2 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .three {
+        grid-area: 3 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .four {
+        grid-area: 4 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .five {
+        grid-area: 5 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .six {
+        grid-area: 6 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .seven {
+        grid-area: 1 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .eight {
+        grid-area: 2 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .nine {
+        grid-area: 3 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .ten {
+        grid-area: 4 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .eleven {
+        grid-area: 5 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .twelve {
+        grid-area: 6 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .thirteen {
+        grid-area: 1 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .fourteen {
+        grid-area: 1 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .fiveteen {
+        grid-area: 3 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+    
+    .sixteen {
+        grid-area: 4 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+
+    .seventeen {
+        grid-area: 5 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+
+    .eighteen {
+        grid-area: 6 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+
+    .nineteen {
+        grid-area: 7 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+
+    .twenty {
+        grid-area: 2 / 1 / span 1 / span 4;
+        background-position: top !important;
+    }
+}
