@@ -20,7 +20,7 @@ import img4 from '../../assets/images/4.png';
 import marketplace from '../../assets/images/marketplace.png';
 import bkad from '../../assets/images/bkad.png';
 import isekaiHotel from '../../assets/images/isekai-hotel.png';
-import dmp from '../../assets/images/dmp.png';
+import dmp from '../../assets/images/DMP.png';
 import dpr from '../../assets/images/dpr.png';
 import refmed from '../../assets/images/refmed.png';
 import mpp from '../../assets/images/mpp.jpg';
