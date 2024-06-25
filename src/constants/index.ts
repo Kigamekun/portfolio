@@ -1,6 +1,6 @@
 // Import assets social media
 // import instagram from "../assets/icons/social-media/instagram.svg";
-import medium from "../assets/icons/social-media/medium.webp";
+import whatsapp from "../assets/icons/social-media/whatsapp.png";
 import linkedin from "../assets/icons/social-media/linkedin.webp";
 import github from "../assets/icons/social-media/github.webp";
 import email from "../assets/icons/social-media/email.webp";
@@ -93,8 +93,8 @@ export const dataLogoSocialMedia: LogoSocialMedia[] = [
   },
   {
     id: 1,
-    logo: medium,
-    navigate: "https://medium.com/@vickyadri29",
+    logo: whatsapp,
+    navigate: "https://api.whatsapp.com/send?phone=62895331493506&text=Halo%20Reksa",
   },
   {
     id: 2,
