@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
           isNavbarResponsive ? "right-0 " : "-right-full"
         } lg:hidden fixed top-0 bg-[#FBFDFF] w-full h-screen transition-all duration-300 ease-out z-50`}
       >
-        <div className="mx-5 text-sky-800 font-extrabold text-2xl italic fixed top-7">VI.</div>
+        <div className="mx-5 text-sky-800 font-extrabold text-2xl italic fixed top-7">KIGAMEKUN.</div>
         <div className="w-full h-screen flex flex-col justify-center items-center gap-10 lg:text-base text-sm">
           {dataNavbar.map(({ id, navigate, navigate_url, offset }) => (
             <Link
