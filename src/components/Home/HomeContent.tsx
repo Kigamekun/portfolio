@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 import shapeHeader from "../../assets/images/header-shape.png";
-
+import cvFile from "../../assets/file/CVREKSAPRAYOGAS(ENG).pdf";
 const HomeContent = () => {
   const [typedText, setTypedText] = useState("");
 
@@ -80,6 +80,13 @@ const HomeContent = () => {
         className="md:text-[24px] max-w-3xl text-center text-slate-500 md:leading-10 leading-6"
       >
         <span className="font-semibold">Fullstack Developer</span> with 3+ years of experience in Laravel for developing a website and web applications.
+        <br /><br /> <a 
+          href={cvFile} 
+          download="CVREKSAPRAYOGAS(ENG).pdf" 
+          className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+        >
+          Curiculum Vitae
+        </a>
       </motion.p>
     </>
   );
