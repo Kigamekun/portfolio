@@ -1,10 +1,13 @@
 ---
 import ProjectsContent from "./ProjectsContent";
+import ProjectsShowcase from "./ProjectsShowcase";
 import DataProjects from "./DataProjects";
-
 ---
 
 <section id="projects" class="my-20 relative">
+  <ProjectsShowcase client:visible />
+
   <ProjectsContent client:visible />
+
   <DataProjects client:visible />
 </section>

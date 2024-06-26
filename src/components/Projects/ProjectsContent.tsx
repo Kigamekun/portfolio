@@ -39,7 +39,9 @@ const ProjectsContent: React.FC = () => {
       variants={projectsContentVariants}
       className="flex justify-center flex-col items-center gap-5 relative"
     >
-      <div className="relative md:w-[590px] w-[315px]">
+    
+
+      <div className="relative md:w-[590px] w-[315px] mt-10">
         <img
           src={aboutShape}
           decoding="async"
@@ -47,13 +49,13 @@ const ProjectsContent: React.FC = () => {
           alt="about shape kigamekun"
           className="absolute -z-10 bottom-2 xl:w-auto md:w-56 w-48"
         />
-        <h2 className="md:text-[56px] text-[30px] md:text-left font-bold text-primary">🚀 Highlight Projects</h2>
+        <h2 className="md:text-[56px] text-[30px] md:text-left font-bold text-primary">🚀Projects Repository</h2>
         <img
           src={burstBloadTwo}
           decoding="async"
           loading="lazy"
           alt="projects shape kigamekun"
-          className="absolute -z-10 top-0 -right-1 md:w-12 w-6"
+          className="absolute -z-10 top-[-10px] -right-5 md:w-12 w-6"
         />
       </div>
       <p className="xl:text-2xl md:text-base text-sm xl:leading-9 text-medium text-center max-w-[50rem]">

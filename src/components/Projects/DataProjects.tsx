@@ -49,7 +49,7 @@ const DataProjects: React.FC = () => {
 
   const images = [
     { src: etwpad, tech: [laravelLogo, bootstrapLogo, postgreeLogo, nginxLogo], gridArea: 'itgrid one shadow md:col-span-2 md:row-span-2' },
-    { src: bkad, tech: [laravelLogo, bootstrapLogo, mysqlLogo, apacheLogo], gridArea: 'itgrid two shadow md:col-span-2 md:row-span-1' },
+    { src: bkad, tech: [laravelLogo, bootstrapLogo, mysqlLogo, apacheLogo], gridArea: 'itgrid two shadow md:col-span-2 md:row-span-1 bg-top' },
     { src: scodeHotel, tech: [laravelLogo, tailwind, mysqlLogo, apacheLogo], gridArea: 'itgrid three shadow md:col-span-2 md:row-span-1' },
 
     { src: plab, tech: [laravelLogo, bootstrapLogo, mysqlLogo, apacheLogo], gridArea: 'itgrid four shadow md:col-span-2 md:row-span-1' },
@@ -63,7 +63,7 @@ const DataProjects: React.FC = () => {
     { src: marketplace, tech: [laravelLogo, bootstrapLogo, mysqlLogo, firebaseLogo, midtransLogo, StripeLogo, PaypallLogo], gridArea: 'itgrid ten md:col-span-2 md:row-span-1 bg-top shadow' },
     { src: lelanginandroid2, tech: [laravelLogo, bootstrapLogo, flutter, mysqlLogo, midtransLogo], gridArea: 'itgrid eleven md:col-span-1 md:row-span-2 shadow' },
     { src: lelanginandroid1, tech: [laravelLogo, bootstrapLogo, flutter, mysqlLogo, midtransLogo], gridArea: 'itgrid twelve md:col-span-1 md:row-span-2 shadow' },
-    { src: cinema, tech: [laravelLogo, tailwind, mysqlLogo, apacheLogo], gridArea: 'itgrid thirteen md:col-span-2 md:row-span-1 shadow' },
+    { src: cinema, tech: [laravelLogo, tailwind, mysqlLogo, apacheLogo], gridArea: 'itgrid thirteen md:col-span-2 md:row-span-1 shadow bg-top' },
 
     { src: scindapsus, tech: [laravelLogo, bootstrapLogo, mysqlLogo, apacheLogo], gridArea: 'itgrid fourteen md:col-span-2 md:row-span-2 bg-top shadow' },
     { src: dmp, tech: [flask, reactLogo, tailwind, postgreeLogo, nginxLogo], gridArea: 'itgrid fiveteen md:col-span-2 md:row-span-1 bg-top shadow' },

@@ -4,22 +4,18 @@ const dataSocialMedia = [
   {
     id: 0,
     icon: <IconBrandLinkedin className="text-[#E2FBFF] hover:text-white cursor-pointer" />,
-    navigate_url: "https://linkedin.com/in/kigamekun",
+    navigate_url: "https://www.linkedin.com/in/reksa-prayoga-syahputra/",
   },
+  
   {
     id: 1,
-    icon: <IconBrandMedium className="text-[#E2FBFF] hover:text-white cursor-pointer" />,
-    navigate_url: "https://medium.com/@vickyadri29",
+    icon: <IconBrandGithub className="text-[#E2FBFF] hover:text-white cursor-pointer" />,
+    navigate_url: "https://github.com/KIGAMEKUN",
   },
   {
     id: 2,
-    icon: <IconBrandGithub className="text-[#E2FBFF] hover:text-white cursor-pointer" />,
-    navigate_url: "https://github.com/kigamekun",
-  },
-  {
-    id: 3,
     icon: <IconMail className="text-[#E2FBFF] hover:text-white cursor-pointer" />,
-    navigate_url: "mailto:vickyadri103@gmail.com",
+    navigate_url: "mailto:reksa.prayoga1012@gmail.com",
   },
 ];
 
