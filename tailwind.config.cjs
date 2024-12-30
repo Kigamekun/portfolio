@@ -7,7 +7,7 @@ module.exports = {
         figtree: ["Figtree", "sans-serif"],
       },
       colors: {
-        primary: "#375878",
+        primary: "#3f2d6c",
         grey: "#9EB5CB",
         "primary-black": "#26343B",
       },

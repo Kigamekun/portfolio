@@ -105,15 +105,9 @@ export default function App() {
 
   return (
     <>
-      <div className="relative md:w-[590px] w-[315px]">
-        <img
-          src={aboutShape}
-          decoding="async"
-          loading="eager"
-          alt="about shape kigamekun"
-          className="absolute -z-10 bottom-2 xl:w-auto md:w-56 w-48"
-        />
+      <div className="relative ">
         <h2 className="md:text-[56px] text-[30px] md:text-center font-bold text-primary">🚀 Highlight Projects</h2>
+        <br />
       </div>
       {projects.map((project, index) => (
         <Item

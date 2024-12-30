@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .hero {
+      min-height: 100vh;
+      background: rgb(16, 14, 37);
+      background: linear-gradient(180deg, rgba(16, 14, 37, 1) 0%, rgba(24, 19, 60, 1) 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      padding-top: 100px;
+
+    }
+
+    .notification {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-content {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 4rem;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 9rem;
+    }
+
+    .glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(138, 62, 255, 0.6) 0%, rgba(138, 62, 255, 0) 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+
+
+
+    .glow-orb {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      z-index: 2;
+    }
+
+    .glow-core {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, 
+        rgba(138, 62, 255, 0.8) 0%,
+        rgba(138, 62, 255, 0.4) 30%,
+        rgba(138, 62, 255, 0.2) 50%,
+        rgba(138, 62, 255, 0) 70%);
+      filter: blur(20px);
+      border-radius: 50%;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    .glow-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid rgba(138, 62, 255, 0.3);
+      border-radius: 50%;
+      animation: rotate 20s linear infinite;
+    }
+
+
+    .reflection {
+      position: absolute;
+      width: 1000px;
+      height: 600px;
+      background: linear-gradient(180deg, rgba(138, 62, 255, 0.5) 0%, rgba(138, 62, 255, 0) 100%);
+      filter: blur(80px);
+      transform: translateY(100%);
+      bottom: -200px;
+      left: calc(50% - 500px);
+      z-index: 1;
+    }
+
+    .dots {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
+      opacity: 0.5;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 2.5rem;
+      max-width: 800px;
+      width: 90%;
+      position: relative;
+      z-index: 3;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .glass-card-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .info-section {
+      color: white;
+    }
+
+    .info-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .info-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .info-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(138, 62, 255, 0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+    }
+
+    .info-text {
+      flex: 1;
+    }
+
+    .info-text h4 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .info-text p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background: rgba(138, 62, 255, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="dots"></div>
+    <div class="glow-orb">
+        <div class="glow-core"></div>
+        <div class="glow-ring"></div>
+      </div>
+  
+    <div class="reflection"></div>
+    <div class="hero-content">
+      <h1>Creative Developer</h1>
+      <p>Building innovative web experiences with modern technologies</p>
+    </div>
+    <div class="glass-card">
+      <div class="glass-card-content">
+        <div class="info-section">
+          <h3>About Me</h3>
+          <div class="info-item">
+            <div class="info-icon">👨‍💻</div>
+            <div class="info-text">
+              <h4>Full Stack Developer</h4>
+              <p>5 years of experience in web development</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🎓</div>
+            <div class="info-text">
+              <h4>Education</h4>
+              <p>Computer Science Graduate</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🌍</div>
+            <div class="info-text">
+              <h4>Location</h4>
+              <p>Available for Remote Work</p>
+            </div>
+          </div>
+        </div>
+        <div class="info-section">
+          <h3>Skills & Expertise</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">UI/UX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -50,15 +50,8 @@ const AboutContent: React.FC = () => {
       className="xl:basis-[58%] md:basis-[55%] flex flex-col gap-5"
     >
       <motion.div variants={item} className="relative md:max-w-[384px] max-w-[215px]">
-        <img
-          src={aboutShape}
-          decoding="async"
-          loading="lazy"
-          alt="about shape kigamekun"
-          className="absolute -z-10 bottom-2 xl:w-auto md:w-56 w-48"
-        />
+        
         <h2 className="md:text-[56px] text-[30px] font-bold text-primary">👨‍💻 About Me</h2>
-        <BurstBload />
       </motion.div>
       <motion.p variants={item} className="xl:text-2xl md:text-base text-sm xl:leading-9 text-medium">
         Haiii I'm Reksa Prayoga Syahputra ! Fullstack Developer specializing in Web and Android device development, has the ability to think critically and problem solving.

@@ -56,6 +56,12 @@ const DataSkills = () => {
               onMouseOut={() => setIsHover(false)}
               variants={item}
               whileHover={{ transform: "translate(0, -6px)" }}
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(20px)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+              }}
               className="cursor-pointer relative flex justify-center z-30 md:w-[144px] w-[70px] md:h-[140px] h-[71px] rounded-md bg-[#192D3E] md:p-5 p-3 shadow-[0px_1px_5px_0px_#000]"
             >
               <img

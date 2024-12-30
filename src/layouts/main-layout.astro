@@ -3,6 +3,7 @@ const { title } = Astro.props;
 import Navbar from "../components/Header/Navbar";
 import ArrowTop from "../components/ArrowTop/ArrowTop";
 import { SEO } from "astro-seo";
+import HomeContent from "../components/Home/HomeContent";
 ---
 
 <html lang="en">
@@ -49,7 +50,15 @@ import { SEO } from "astro-seo";
       rel="stylesheet"
     />
   </head>
-  <body class="bg-[#FBFDFF]">
+
+  <style>
+    * {
+      overflow-x: hidden !important;
+    }
+  </style>
+  <body class="bg-[#FBFDFF]" >
+    <HomeContent client:load />
+
     <main class="max-w-7xl mx-auto font-figtree text-primary-black">
       <div class="m-5">
         <Navbar client:load />

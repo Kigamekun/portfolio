@@ -21,7 +21,7 @@ const dataSocialMedia = [
 
 const SocialMedia = () => {
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex items-center justify-center pt-4 gap-6">
       {dataSocialMedia.map(({ id, icon, navigate_url }) => (
         <a href={navigate_url} key={id}>
           {icon}

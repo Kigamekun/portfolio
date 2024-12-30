@@ -24,6 +24,9 @@ import dmp from '../../assets/images/DMP.png';
 import dpr from '../../assets/images/dpr.png';
 import refmed from '../../assets/images/refmed.png';
 import mpp from '../../assets/images/mpp.jpg';
+import sidak from '../../assets/images/sidak.png';
+import simpol from '../../assets/images/simpol.png';
+import gencerling from '../../assets/images/gencerling.png';
 
 import laravelLogo from '../../assets/icons/tech-stack/laravel.svg';
 import reactLogo from '../../assets/icons/tech-stack/react.svg';
@@ -75,6 +78,11 @@ const DataProjects: React.FC = () => {
     { src: cctv, tech: [laravelLogo, bootstrapLogo, , mysqlLogo, apacheLogo], gridArea: 'itgrid nineteen md:col-span-1 md:row-span-2 shadow' },
     { src: isekaiHotel, tech: [laravelLogo, reactLogo, bootstrapLogo, apacheLogo, xendit], gridArea: 'itgrid twenty md:col-span-2 md:row-span-2 shadow' },
 
+
+    { src: sidak, tech: [express,next,tailwind, postgreeLogo, mongodb, apacheLogo], gridArea: 'itgrid twentyone md:col-span-2 md:row-span-2 bg-top shadow' },
+    { src: simpol, tech: [laravelLogo, bootstrapLogo, mysqlLogo, firebaseLogo, apacheLogo], gridArea: 'itgrid  twentytwo md:col-span-2 md:row-span-1 shadow' },
+    { src: gencerling, tech: [laravelLogo, bootstrapLogo, mysqlLogo, firebaseLogo, apacheLogo], gridArea: 'itgrid bg-top twentythree md:col-span-2 md:row-span-2 shadow' },
+
   ];
 
 
@@ -111,7 +119,7 @@ const DataProjects: React.FC = () => {
     },
   };
 
-  const imagesPerPage = [6, 7, 7]; // Jumlah gambar per halaman
+  const imagesPerPage = [6, 7, 7, 7]; // Jumlah gambar per halaman
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = imagesPerPage.length; // Jumlah total halaman
@@ -178,8 +186,8 @@ const DataProjects: React.FC = () => {
           className="px-4 py-2 bg-[#1bacdc] text-white rounded disabled:bg-gray-300"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-left-fill" viewBox="0 0 16 16">
-  <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-</svg>
+            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+          </svg>
         </button>
         <button
           onClick={handleNextPage}
@@ -187,8 +195,8 @@ const DataProjects: React.FC = () => {
           className="px-4 py-2 bg-[#1bacdc] text-white rounded disabled:bg-gray-300"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-right-fill" viewBox="0 0 16 16">
-  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-</svg>
+            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+          </svg>
         </button>
       </div>
 
