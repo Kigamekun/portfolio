@@ -1,29 +1,139 @@
 ---
-import shape from "../../assets/images/shape-light.svg";
-import newSkills from "../../assets/icons/new.svg";
+import laravel from "../../assets/icons/tech-stack/laravel.svg";
+import express from "../../assets/icons/tech-stack/express.svg";
+import node from "../../assets/icons/tech-stack/node.svg";
+import python from "../../assets/icons/tech-stack/python.svg";
+import go from "../../assets/icons/tech-stack/go.svg";
+import react from "../../assets/icons/tech-stack/react.svg";
+import next from "../../assets/icons/tech-stack/next.svg";
+import typescript from "../../assets/icons/tech-stack/typescript.svg";
+import javascript from "../../assets/icons/tech-stack/javascript.svg";
+import tailwind from "../../assets/icons/tech-stack/tailwind.svg";
+import postgresql from "../../assets/icons/tech-stack/postgresql.svg";
+import mysql from "../../assets/icons/tech-stack/mysql.svg";
+import mongodb from "../../assets/icons/tech-stack/mongodb.svg";
+import firebase from "../../assets/icons/tech-stack/firebase.svg";
+import nginx from "../../assets/icons/tech-stack/nginx.svg";
+import graphql from "../../assets/icons/tech-stack/graphql.svg";
+import flutter from "../../assets/icons/tech-stack/flutter.svg";
+import stripe from "../../assets/icons/tech-stack/stripe.svg";
 
-import DataSkills from "./DataSkills";
+const skillset = [
+  { name: "Laravel", icon: laravel },
+  { name: "Express", icon: express },
+  { name: "Node.js", icon: node },
+  { name: "Python", icon: python },
+  { name: "Go", icon: go },
+  { name: "React", icon: react },
+  { name: "Next.js", icon: next },
+  { name: "TypeScript", icon: typescript },
+  { name: "JavaScript", icon: javascript },
+  { name: "Tailwind", icon: tailwind },
+  { name: "PostgreSQL", icon: postgresql },
+  { name: "MySQL", icon: mysql },
+  { name: "MongoDB", icon: mongodb },
+  { name: "Firebase", icon: firebase },
+  { name: "Nginx", icon: nginx },
+  { name: "GraphQL", icon: graphql },
+  { name: "Flutter", icon: flutter },
+  { name: "Stripe", icon: stripe },
+];
 ---
 
-<section id="skills" style="background:rgba(24, 19, 60, 1)">
-  <div class="dots" style={{
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    backgroundImage: "radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
-    backgroundSize: "30px 30px",
-    opacity: 0.5,
-  }}></div>
-  <div class="max-w-7xl m-auto px-5 py-10">
-    <div class="flex flex-col gap-5">
-      <div class="relative md:w-[595px] md:pt-4 pt-1 w-[325px]">
-        <h2 class="relative md:text-[56px] z-20 text-[30px] md:text-left font-bold">🎯 Specialized Skills</h2>
+<section id="skills" class="section-block scroll-mt-32">
+  <div class="surface-card p-6 md:p-10">
+    <div class="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+      <div class="max-w-xl">
+        <span class="section-kicker">Skillset</span>
+        <h2 class="section-heading mt-6">A practical stack for shipping reliable products with speed and structure.</h2>
+        <p class="mt-5 text-sm leading-7 text-[var(--muted)] md:text-base md:leading-8">
+          These are the tools I rely on to design, build, and maintain production-ready products across frontend,
+          backend, data, and deployment.
+        </p>
       </div>
-      <p class="xl:text-2xl md:text-base text-sm xl:leading-9 text-medium xl:max-w-[38rem] text-[#98A0AC]">
-        I am someone who enjoys seeking challenges. Here are a few skills that I have developed and honed.
-      </p>
-    </div>
 
-    <DataSkills client:visible />
+      <div class="skills-grid grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+        {
+          skillset.map((skill) => (
+            <div class="glass-badge flex items-center gap-4 rounded-[22px] px-4 py-4 skill-pill">
+              <div class="skill-icon grid h-12 w-12 place-items-center rounded-[16px] border border-[rgba(94,75,245,0.12)] bg-[rgba(94,75,245,0.05)] backdrop-blur-md">
+                <img src={skill.icon} alt={skill.name} class="h-7 w-7 object-contain" loading="lazy" decoding="async" />
+              </div>
+              <span class="skill-label text-sm font-semibold text-[#20242a]">{skill.name}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+  .skill-pill {
+    background: rgba(255, 255, 255, 0.62);
+  }
+
+  @media (max-width: 720px) {
+    .skills-grid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.65rem;
+    }
+
+    .skill-pill {
+      justify-content: center;
+      gap: 0;
+      border-radius: 18px;
+      padding: 0.75rem 0.25rem;
+    }
+
+    .skill-icon {
+      height: 3.1rem;
+      width: 3.1rem;
+      margin: 0 auto;
+      border-radius: 15px;
+    }
+
+    .skill-label {
+      display: none;
+    }
+  }
+
+  :global(html[data-theme="dark"]) .skill-pill {
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  :global(html[data-theme="dark"]) .skill-icon {
+    border-color: rgba(94, 75, 245, 0.24);
+    background: rgba(94, 75, 245, 0.14);
+  }
+
+  :global(html[data-theme="dark"]) .skill-label {
+    color: #f3eee7;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .skill-pill {
+    background: rgba(255, 255, 255, 0.62);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .skill-icon {
+    border-color: rgba(94, 75, 245, 0.12);
+    background: rgba(94, 75, 245, 0.05);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .skill-label {
+    color: #20242a;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .skill-pill {
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .skill-icon {
+    border-color: rgba(94, 75, 245, 0.24);
+    background: rgba(94, 75, 245, 0.14);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .skill-label {
+    color: #f3eee7;
+  }
+</style>

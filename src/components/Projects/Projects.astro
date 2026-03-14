@@ -1,13 +1,672 @@
 ---
-import ProjectsContent from "./ProjectsContent";
-import ProjectsShowcase from "./ProjectsShowcase";
-import DataProjects from "./DataProjects";
+import etwpad from "../../assets/images/etwpad.png";
+import bkad from "../../assets/images/bkad.png";
+import sijala from "../../assets/images/kkp.png";
+import dmp from "../../assets/images/DMP.png";
+import plab from "../../assets/images/plab.png";
+import cctv from "../../assets/images/cctv.png";
+import cinema from "../../assets/images/cinema.png";
+import redhunter from "../../assets/images/redhunter-page.jpg";
+import scindapsus from "../../assets/images/scindapsus.png";
+import scodeHotel from "../../assets/images/scode-hotel.png";
+import smk3 from "../../assets/images/smk3.png";
+import plantsasri from "../../assets/images/plantsasri.png";
+import lelanginandroid2 from "../../assets/images/lelanginandroid2.jpg";
+import lelanginandroid1 from "../../assets/images/lelanginandroid1.jpg";
+import img1 from "../../assets/images/1.png";
+import img4 from "../../assets/images/4.png";
+import marketplace from "../../assets/images/marketplace.png";
+import isekaiHotel from "../../assets/images/isekai-hotel.png";
+import dpr from "../../assets/images/dpr.png";
+import refmed from "../../assets/images/refmed.png";
+import mpp from "../../assets/images/mpp.jpg";
+import sidak from "../../assets/images/sidak.png";
+import simpol from "../../assets/images/simpol.png";
+import gencerling from "../../assets/images/gencerling.png";
+import villageWeb from "../../assets/images/village-web.webp";
+import hmtiUntad from "../../assets/images/hmti-untad.webp";
+import hrev from "../../assets/images/hrev.webp";
+import snResidence from "../../assets/images/sn-residence.webp";
+
+const featuredProjects = [
+  {
+    title: "ETWPAD",
+    category: "Government workflow platform",
+    image: etwpad,
+    stack: ["Laravel", "PostgreSQL", "Nginx"],
+    summary:
+      "Structured administration and reporting platform built for public-sector workflows, cleaner form handling, and a more reliable back-office experience.",
+  },
+  {
+    title: "Smart BKAD",
+    category: "Internal finance workspace",
+    image: bkad,
+    stack: ["Laravel", "MySQL", "Bootstrap"],
+    summary:
+      "Internal system for correspondence, agenda, archive management, and day-to-day coordination designed to simplify work across BKAD operations.",
+  },
+  {
+    title: "Amanda DMP Telkomsel",
+    category: "Operational analytics dashboard",
+    image: dmp,
+    stack: ["Flask", "React", "PostgreSQL"],
+    summary:
+      "Monitoring and reporting dashboard that consolidates operational visibility, performance tracking, and day-to-day decision support into a single system.",
+  },
+  {
+    title: "SIJALA App",
+    category: "Mobile public service app",
+    image: sijala,
+    stack: ["Flutter", "Laravel", "MySQL"],
+    summary:
+      "Mobile application concept for reporting, status tracking, and service follow-up, shaped around a cleaner field workflow and clearer citizen-facing access.",
+  },
+  {
+    title: "Redhunter Academy",
+    category: "Learning platform",
+    image: redhunter,
+    stack: ["Express", "Next.js", "MongoDB"],
+    summary:
+      "Learning management system, course flow, and automation support for a more structured digital academy experience.",
+  },
+];
+
+const moreProjects = [
+  {
+    title: "Plantsasri",
+    category: "Commerce platform",
+    image: plantsasri,
+    stack: ["Laravel", "Firebase", "Stripe"],
+    summary:
+      "Commerce-oriented product with payment integration and a more polished operational flow.",
+  },
+  {
+    title: "Scode Hotel",
+    category: "Hospitality web",
+    image: scodeHotel,
+    stack: ["Laravel", "Tailwind", "MySQL"],
+    summary:
+      "Hospitality website and booking flow tailored for hotel product needs and digital presentation.",
+  },
+  {
+    title: "PLAB Platform",
+    category: "Company platform",
+    image: plab,
+    stack: ["Laravel", "Bootstrap", "MySQL"],
+    summary:
+      "Company-facing digital platform supporting internal operations and public-facing workflow.",
+  },
+  {
+    title: "SMKN 3 Bogor",
+    category: "School website",
+    image: smk3,
+    stack: ["Laravel", "Bootstrap", "MySQL"],
+    summary:
+      "School website focused on information access and structured content delivery.",
+  },
+  {
+    title: "Lelangin Mobile Home",
+    category: "Mobile commerce",
+    image: img1,
+    stack: ["Flutter", "Laravel", "Midtrans"],
+    summary:
+      "Commerce mobile app with listing, browsing, and transaction-oriented features.",
+  },
+  {
+    title: "Lelangin Mobile Detail",
+    category: "Mobile commerce",
+    image: img4,
+    stack: ["Flutter", "Laravel", "Midtrans"],
+    summary:
+      "Extended mobile commerce flow for product detail and transaction handling.",
+  },
+  {
+    title: "Marketplace Platform",
+    category: "Commerce platform",
+    image: marketplace,
+    stack: ["Laravel", "Firebase", "Stripe"],
+    summary:
+      "Marketplace system designed for product discovery and transaction flow.",
+  },
+  {
+    title: "Lelangin Android App",
+    category: "Mobile commerce",
+    image: lelanginandroid2,
+    stack: ["Flutter", "Laravel", "Midtrans"],
+    summary:
+      "Android commerce experience with integrated payments and product browsing.",
+  },
+  {
+    title: "Lelangin Mobile Screen",
+    category: "Mobile commerce",
+    image: lelanginandroid1,
+    stack: ["Flutter", "Laravel", "Midtrans"],
+    summary:
+      "Supporting mobile screen design for broader e-commerce flow coverage.",
+  },
+  {
+    title: "Cinema Booking",
+    category: "Booking platform",
+    image: cinema,
+    stack: ["Laravel", "Tailwind", "MySQL"],
+    summary:
+      "Booking-focused digital experience for cinema discovery and seat flow.",
+  },
+  {
+    title: "Scindapsus Store",
+    category: "Commerce website",
+    image: scindapsus,
+    stack: ["Laravel", "Bootstrap", "MySQL"],
+    summary:
+      "Commerce website with cleaner catalog presentation and admin flow.",
+  },
+  {
+    title: "DPR Portal",
+    category: "Government portal",
+    image: dpr,
+    stack: ["Next.js", "Ant Design", "PostgreSQL"],
+    summary:
+      "Portal and information system with structured public-facing access.",
+  },
+  {
+    title: "Refmed Platform",
+    category: "Service platform",
+    image: refmed,
+    stack: ["Laravel", "Firebase", "MySQL"],
+    summary:
+      "Service platform combining operational management and user access.",
+  },
+  {
+    title: "MPP Depok Mobile",
+    category: "Public service app",
+    image: mpp,
+    stack: ["Flutter"],
+    summary:
+      "Mobile public-service application for information, schedules, and civic access.",
+  },
+  {
+    title: "CCTV Monitoring",
+    category: "Monitoring website",
+    image: cctv,
+    stack: ["Laravel", "Bootstrap", "MySQL"],
+    summary:
+      "Real-time monitoring website designed around CCTV visibility and access.",
+  },
+  {
+    title: "Isekai Hotel",
+    category: "Hospitality product",
+    image: isekaiHotel,
+    stack: ["Laravel", "React", "Xendit"],
+    summary:
+      "Hospitality product integrating booking, operational flow, and payment.",
+  },
+  {
+    title: "SIDAK Dashboard",
+    category: "Monitoring platform",
+    image: sidak,
+    stack: ["Express", "Next.js", "MongoDB"],
+    summary:
+      "Monitoring platform with dashboard-oriented interaction and system visibility.",
+  },
+  {
+    title: "SIMPOL",
+    category: "Service application",
+    image: simpol,
+    stack: ["Laravel", "Firebase", "MySQL"],
+    summary:
+      "Service application structured for easier access to operational workflow.",
+  },
+  {
+    title: "Gencerling",
+    category: "Digital service",
+    image: gencerling,
+    stack: ["Laravel", "Firebase", "MySQL"],
+    summary:
+      "Digital service platform with practical workflow and clearer interaction.",
+  },
+  {
+    title: "Village Website",
+    category: "Public information website",
+    image: villageWeb,
+    stack: ["Company profile"],
+    summary:
+      "Public information website created for local administration and communication.",
+  },
+  {
+    title: "HMTI UNTAD",
+    category: "Organization website",
+    image: hmtiUntad,
+    stack: ["Web platform"],
+    summary:
+      "Organization website built to communicate activities and institutional identity.",
+  },
+  {
+    title: "HREV",
+    category: "Company website",
+    image: hrev,
+    stack: ["Landing page"],
+    summary:
+      "Company website with a simpler presentation of business identity and services.",
+  },
+  {
+    title: "SN Residence",
+    category: "Property website",
+    image: snResidence,
+    stack: ["Company profile"],
+    summary:
+      "Property website focused on presentation, trust, and structured information.",
+  },
+];
 ---
 
-<section id="projects" class="my-20 relative">
-  <ProjectsShowcase client:visible />
+<section id="projects" class="section-block scroll-mt-32">
+  <div class="surface-card p-6 md:p-10">
+    <div class="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
+      <div class="max-w-sm">
+        <span class="section-kicker">Projects</span>
+        <h2 class="section-heading mt-6">Project archive.</h2>
+      </div>
 
-  <ProjectsContent client:visible />
+      <p
+        class="max-w-3xl text-sm leading-7 text-[var(--muted)] md:text-base md:leading-8"
+      >
+        A focused archive of shipped work across internal systems, dashboards,
+        public-service products, and operational platforms. The first five
+        projects stay in view, with the rest available below.
+      </p>
+    </div>
 
-  <DataProjects client:visible />
+    <div class="project-list mt-8">
+      {
+        featuredProjects.map((project, index) => (
+          <article class:list={["project-row group"]}>
+            <div class="project-row-copy">
+              <div class="project-row-head">
+                <div class="project-row-index">
+                  {(index + 1).toString().padStart(2, "0")}
+                </div>
+                <div class="project-row-heading">
+                  <p class="project-row-category">{project.category}</p>
+                  <div class="project-row-title-wrap">
+                    <h3 class="project-row-title">{project.title}</h3>
+                  </div>
+                </div>
+              </div>
+
+              <p class="project-row-summary">{project.summary}</p>
+
+              <div class="project-row-tags">
+                {project.stack.map((item) => (
+                  <span class="glass-badge project-row-tag">{item}</span>
+                ))}
+              </div>
+            </div>
+
+            <div class="project-preview" aria-hidden="true">
+              <div class="project-preview-frame">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  class="project-preview-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <details class="project-more mt-8">
+      <summary class="glass-badge project-more-trigger">More projects</summary>
+
+      <div class="project-list project-list-more">
+        {
+          moreProjects.map((project, index) => (
+            <article class="project-row group">
+              <div class="project-row-copy">
+                <div class="project-row-head">
+                  <div class="project-row-index">
+                    {(index + 6).toString().padStart(2, "0")}
+                  </div>
+                  <div>
+                    <p class="project-row-category">{project.category}</p>
+                    <h3 class="project-row-title">{project.title}</h3>
+                  </div>
+                </div>
+
+                <p class="project-row-summary">{project.summary}</p>
+
+                <div class="project-row-tags">
+                  {project.stack.map((item) => (
+                    <span class="glass-badge project-row-tag">{item}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div class="project-preview" aria-hidden="true">
+                <div class="project-preview-frame">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    class="project-preview-image"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </details>
+  </div>
 </section>
+
+<style>
+  .project-list {
+    display: grid;
+    gap: 0.95rem;
+  }
+
+  .project-row {
+    position: relative;
+    overflow: visible;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    min-height: 236px;
+    border: 1px solid rgba(17, 19, 21, 0.08);
+    border-radius: 30px;
+    background: rgba(255, 251, 245, 0.72);
+    box-shadow: 0 12px 30px rgba(15, 17, 19, 0.03);
+    transition: border-color 220ms ease, box-shadow 220ms ease,
+      transform 220ms ease;
+  }
+
+  .project-row:hover {
+    border-color: rgba(94, 75, 245, 0.18);
+    box-shadow: 0 18px 40px rgba(15, 17, 19, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .project-row-copy {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .project-row-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .project-row-heading {
+    min-width: 0;
+  }
+
+  .project-row-index {
+    display: inline-flex;
+    height: 44px;
+    width: 44px;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(94, 75, 245, 0.07);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgb(94, 75, 245);
+    transition: background-color 220ms ease, color 220ms ease;
+  }
+
+  .project-row-category {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    transition: color 220ms ease;
+  }
+
+  .project-row-title {
+    margin-top: 0.8rem;
+    max-width: 18ch;
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    color: #111315;
+    transition: color 220ms ease;
+  }
+
+  .project-row-title-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .project-row-summary {
+    max-width: none;
+    font-size: 0.98rem;
+    line-height: 1.9;
+    color: var(--muted);
+    transition: color 220ms ease;
+  }
+
+  .project-row-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .project-row-tag {
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #2d3238;
+    transition: color 220ms ease, background-color 220ms ease,
+      border-color 220ms ease;
+  }
+
+  .project-preview {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 1.4rem;
+    z-index: 3;
+    width: min(470px, 40%);
+    opacity: 0;
+    transform: translate(24px, -50%) rotate(4deg) scale(0.96);
+    transition: opacity 260ms ease, transform 260ms ease;
+  }
+
+  .project-preview-frame {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.78);
+    padding: 0.6rem;
+    box-shadow: 0 24px 60px rgba(15, 17, 19, 0.12);
+    backdrop-filter: blur(14px);
+  }
+
+  .project-preview-image {
+    aspect-ratio: 16 / 11;
+    width: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .project-row:hover .project-preview {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(0) scale(1);
+  }
+
+  .project-row:hover .project-row-index {
+    background: rgba(94, 75, 245, 0.14);
+  }
+
+  .project-private-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid rgba(17, 19, 21, 0.1);
+    background: rgba(17, 19, 21, 0.05);
+    padding: 0.38rem 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #3e444a;
+  }
+
+  .project-row.is-private {
+    background: radial-gradient(
+        circle at right top,
+        rgba(94, 75, 245, 0.08),
+        transparent 32%
+      ),
+      rgba(255, 251, 245, 0.74);
+  }
+
+  .project-more {
+    margin-top: 2rem;
+  }
+
+  .project-more-trigger {
+    display: inline-flex;
+    cursor: pointer;
+    list-style: none;
+    border-radius: 999px;
+    padding: 0.8rem 1rem;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: rgb(94, 75, 245);
+  }
+
+  .project-more-trigger::-webkit-details-marker {
+    display: none;
+  }
+
+  .project-list-more {
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    .project-row-copy {
+      width: 55%;
+      max-width: 55%;
+    }
+
+    .project-preview {
+      width: 40%;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .project-preview {
+      display: none;
+    }
+
+    .project-list {
+      gap: 0.75rem;
+    }
+
+    .project-row {
+      min-height: auto;
+      border-radius: 24px;
+    }
+
+    .project-row-copy {
+      padding: 1rem;
+      gap: 0.9rem;
+    }
+
+    .project-more {
+      margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .project-row-title {
+      margin-top: 0.55rem;
+      font-size: 1.32rem;
+    }
+
+    .project-row-summary {
+      font-size: 0.9rem;
+      line-height: 1.72;
+    }
+
+    .project-row-title-wrap {
+      align-items: flex-start;
+    }
+
+    .project-row-tag {
+      padding: 0.4rem 0.65rem;
+      font-size: 0.68rem;
+    }
+  }
+
+  :global(html[data-theme="dark"]) .project-row {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(20, 22, 28, 0.84);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
+  }
+
+  :global(html[data-theme="dark"]) .project-row-title {
+    color: #f3eee7;
+  }
+
+  :global(html[data-theme="dark"]) .project-row-tag {
+    color: #ede7df;
+  }
+
+  :global(html[data-theme="dark"]) .project-preview-frame {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(20, 22, 28, 0.9);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .project-row-title {
+    color: #111315;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .project-row-tag {
+    color: rgb(94, 75, 245);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .project-preview-frame {
+    border-color: rgba(17, 19, 21, 0.08);
+    background: rgba(255, 251, 245, 0.74);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .project-row {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(20, 22, 28, 0.84);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .project-row-title {
+    color: #f3eee7;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .project-row-tag {
+    color: #ede7df;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .project-preview-frame {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(20, 22, 28, 0.9);
+  }
+</style>

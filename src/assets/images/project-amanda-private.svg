@@ -1,0 +1,30 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="amandaBg" x1="160" y1="64" x2="1068" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12141A"/>
+      <stop offset="1" stop-color="#1B1630"/>
+    </linearGradient>
+    <linearGradient id="amandaGlow" x1="600" y1="160" x2="600" y2="660" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6D55FF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#6D55FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="40" fill="url(#amandaBg)"/>
+  <rect x="48" y="48" width="1104" height="624" rx="30" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <rect x="112" y="110" width="460" height="24" rx="12" fill="#F8F4ED" fill-opacity="0.08"/>
+  <rect x="112" y="164" width="280" height="18" rx="9" fill="#F8F4ED" fill-opacity="0.12"/>
+  <rect x="112" y="222" width="976" height="370" rx="30" fill="#F8F4ED" fill-opacity="0.04"/>
+  <rect x="148" y="258" width="248" height="280" rx="24" fill="#F8F4ED" fill-opacity="0.05"/>
+  <rect x="430" y="258" width="284" height="132" rx="24" fill="#F8F4ED" fill-opacity="0.05"/>
+  <rect x="748" y="258" width="304" height="132" rx="24" fill="#F8F4ED" fill-opacity="0.05"/>
+  <rect x="430" y="424" width="622" height="114" rx="24" fill="#F8F4ED" fill-opacity="0.05"/>
+  <rect x="770" y="110" width="318" height="66" rx="22" fill="#6D55FF"/>
+  <text x="806" y="151" fill="#FFF9F0" font-family="Manrope, Arial, sans-serif" font-size="24" font-weight="700">PRIVATE PREVIEW</text>
+  <text x="112" y="430" fill="#FFF9F0" font-family="Space Grotesk, Arial, sans-serif" font-size="74" font-weight="700">AMANDA</text>
+  <text x="112" y="492" fill="#FFF9F0" font-family="Space Grotesk, Arial, sans-serif" font-size="74" font-weight="700">DASHBOARD</text>
+  <text x="112" y="584" fill="#C7BEDF" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="500">Internal campaign operations, reporting, and ad performance workspace.</text>
+  <text x="112" y="628" fill="#9D91C7" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="600">Preview intentionally limited because the product is private.</text>
+  <rect x="838" y="446" width="150" height="150" rx="32" fill="url(#amandaGlow)"/>
+  <path d="M887 490C887 474.536 899.536 462 915 462H939C954.464 462 967 474.536 967 490V514C967 529.464 954.464 542 939 542H915C899.536 542 887 529.464 887 514V490Z" stroke="#FFF9F0" stroke-width="8"/>
+  <path d="M904 462V445C904 426.222 919.222 411 938 411C956.778 411 972 426.222 972 445V462" stroke="#FFF9F0" stroke-width="8" stroke-linecap="round"/>
+</svg>

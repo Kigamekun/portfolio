@@ -1,0 +1,29 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sijalaBg" x1="64" y1="64" x2="1120" y2="688" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF9"/>
+      <stop offset="1" stop-color="#F2ECE6"/>
+    </linearGradient>
+    <linearGradient id="sijalaAccent" x1="376" y1="178" x2="844" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8A76FF"/>
+      <stop offset="1" stop-color="#5E4BF5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="40" fill="url(#sijalaBg)"/>
+  <rect x="48" y="48" width="1104" height="624" rx="30" stroke="#D9D0EA" stroke-width="2"/>
+  <text x="116" y="158" fill="#5E4BF5" font-family="Manrope, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4">PLACEHOLDER PREVIEW</text>
+  <text x="112" y="298" fill="#111315" font-family="Space Grotesk, Arial, sans-serif" font-size="78" font-weight="700">SIJALA APP</text>
+  <text x="112" y="356" fill="#5D625D" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="500">Mobile public-service workflow for reporting, follow-up, and status visibility.</text>
+  <text x="112" y="402" fill="#7A7F7A" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="600">Visual preview will be replaced when the final screenshot is available.</text>
+  <rect x="766" y="126" width="248" height="464" rx="42" fill="url(#sijalaAccent)"/>
+  <rect x="784" y="146" width="212" height="424" rx="32" fill="#FFF9F0"/>
+  <rect x="824" y="174" width="132" height="14" rx="7" fill="#D8D0EA"/>
+  <rect x="816" y="228" width="148" height="108" rx="22" fill="#EEE8FF"/>
+  <rect x="816" y="360" width="148" height="20" rx="10" fill="#5E4BF5" fill-opacity="0.18"/>
+  <rect x="816" y="392" width="148" height="20" rx="10" fill="#5E4BF5" fill-opacity="0.12"/>
+  <rect x="816" y="424" width="148" height="20" rx="10" fill="#5E4BF5" fill-opacity="0.12"/>
+  <rect x="816" y="470" width="148" height="52" rx="18" fill="#5E4BF5"/>
+  <circle cx="358" cy="520" r="132" fill="#EEE8FF"/>
+  <circle cx="358" cy="520" r="82" fill="#DDD3FF"/>
+  <path d="M329 525L349 545L389 493" stroke="#5E4BF5" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

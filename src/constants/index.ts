@@ -61,27 +61,39 @@ import pattern4 from "../assets/images/patterns/pattern4.svg";
 export const dataNavbar: Navbar[] = [
   {
     id: 0,
-    navigate: "Profile",
-    navigate_url: "profile",
-    offset: -100,
+    navigate: "Home",
+    navigate_url: "home",
+    offset: -110,
   },
   {
     id: 1,
-    navigate: "Projects",
-    navigate_url: "projects",
-    offset: -105,
+    navigate: "About",
+    navigate_url: "profile",
+    offset: -110,
   },
   {
     id: 2,
-    navigate: "Experience",
-    navigate_url: "experience",
-    offset: -50,
+    navigate: "Projects",
+    navigate_url: "projects",
+    offset: -110,
   },
   {
     id: 3,
+    navigate: "Skills",
+    navigate_url: "skills",
+    offset: -110,
+  },
+  {
+    id: 4,
+    navigate: "Experience",
+    navigate_url: "experience",
+    offset: -110,
+  },
+  {
+    id: 5,
     navigate: "Contact",
     navigate_url: "contact",
-    offset: 0,
+    offset: -110,
   },
 ];
 
@@ -90,21 +102,25 @@ export const dataLogoSocialMedia: LogoSocialMedia[] = [
     id: 0,
     logo: linkedin,
     navigate: "https://www.linkedin.com/in/reksa-prayoga-syahputra/",
+    label: "LinkedIn",
   },
   {
     id: 1,
     logo: whatsapp,
     navigate: "https://api.whatsapp.com/send?phone=62895331493506&text=Halo%20Reksa",
+    label: "WhatsApp",
   },
   {
     id: 2,
     logo: github,
     navigate: "https://github.com/Kigamekun",
+    label: "GitHub",
   },
   {
     id: 3,
     logo: email,
     navigate: "mailto:reksa.prayoga1012@gmail.com",
+    label: "Email",
   },
 ];
 
@@ -168,7 +184,7 @@ export const dataExperience: Experience[] = [
     name: "Redhunter Academy",
     description: "@redhunter",
     date: "Aug 2021 - Mar 2023",
-    position: "Backend Developer",
+    position: "Backend",
     responsibilites: [
       "Developed a comprehensive learning management system (LMS) for Redhunter Academy, providing a forum for 'hunters' with various forms of courses.",
       "Designed and implemented a task control and quiz system to enhance teaching and learning activities, making Redhunter a fun and engaging offline learning medium.",
@@ -195,7 +211,7 @@ export const dataExperience: Experience[] = [
     name: "Bonet Utama",
     description: "@bonetutama",
     date: "Jan 2022 - Oct 2023",
-    position: "Fullstack Developer",
+    position: "Fullstack",
     responsibilites: [
       "Developed the Depok City MPP Mobile Application to facilitate access to government services, including public service information, problem reporting, event schedules, direct consultation, and an interactive map.",
       "Created the BKAD application to streamline activities such as correspondence, schedules, archiving, and more for BKAD staff.",
@@ -216,7 +232,7 @@ export const dataExperience: Experience[] = [
     name: "Visi Kreasi Asia",
     description: "@kreasiasia",
     date: "Jul 2021 - Jul 2022",
-    position: "Fullstack Developer",
+    position: "Fullstack",
     responsibilites: [
       "Developed financial web admin and Android apps for the Indonesian Army (TNI AD) and a National Bank (Bank BTN).",
       "Created modules for Accounting (E-ACCOUNTING), Soldier monthly contributions (E-TPPAD), Soldier pension return (E-BALTAB), and Soldier mortgage loans (E-KPR).",

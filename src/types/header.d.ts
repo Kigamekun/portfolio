@@ -1,5 +1,6 @@
 interface LogoSocialMedia {
   id: number;
   logo: string;
-  navigate: string
+  navigate: string;
+  label?: string;
 }

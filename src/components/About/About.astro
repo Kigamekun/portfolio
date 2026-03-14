@@ -1,13 +1,243 @@
 ---
-import AboutContent from "./AboutContent";
-import AboutImage from "./AboutImage";
+import reksaIdCard from "../../assets/images/reksa-id.png";
+
+const profile = {
+  name: "Reksa Prayoga Syahputra",
+  email: "reksa.prayoga1012@gmail.com",
+};
 ---
 
-<section id="profile" class="flex justify-center w-full">
-  <div
-    class="flex items-center md:flex-row flex-col justify-between md:gap-5 gap-10"
-  >
-    <AboutContent client:visible />
-    <AboutImage client:visible />
+<section id="profile" class="section-block about-entry scroll-mt-32">
+  <div class="surface-card about-shell">
+    <div class="about-grid">
+      <div class="about-copy-wrap">
+        <span class="section-kicker">About</span>
+
+        <h2 class="about-heading">
+          Fullstack Developer building scalable systems.
+        </h2>
+
+        <p class="about-copy">
+          Reksa Prayoga Syahputra is a fullstack developer focused on dashboards, internal systems, business websites,
+          and API-connected products with practical architecture, clear interfaces, and dependable delivery.
+        </p>
+
+        <a href={`mailto:${profile.email}`} class="about-contact">
+          {profile.email}
+        </a>
+      </div>
+
+      <div class="about-visual">
+        <div class="visual-base"></div>
+
+        <img
+          src={reksaIdCard}
+          alt="Reksa Prayoga Syahputra ID Card"
+          class="id-card-image"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+  .about-entry {
+    margin-top: -0.45rem;
+  }
+
+  .about-shell {
+    position: relative;
+    overflow: visible;
+    padding: clamp(1.2rem, 2.4vw, 2rem);
+    border-radius: 30px;
+    background: linear-gradient(180deg, #fcfbf8 0%, #f7f5f1 100%);
+    border: 1px solid rgba(17, 19, 21, 0.06);
+    box-shadow: 0 20px 60px rgba(17, 19, 21, 0.06);
+  }
+
+  .about-grid {
+    display: grid;
+    gap: clamp(1.4rem, 2vw, 2.4rem);
+    align-items: center;
+  }
+
+  .about-copy-wrap {
+    position: relative;
+    z-index: 2;
+  }
+
+  .about-heading {
+    margin: 0.75rem 0 0;
+    max-width: 11ch;
+    font-size: clamp(2.2rem, 4.6vw, 4.8rem);
+    line-height: 0.96;
+    letter-spacing: -0.085em;
+    color: #111315;
+    text-wrap: balance;
+  }
+
+  .about-copy {
+    margin: 1rem 0 0;
+    max-width: 56ch;
+    font-size: 0.98rem;
+    line-height: 1.85;
+    color: #5c636d;
+  }
+
+  .about-contact {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #111315;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    transition: opacity 0.2s ease;
+  }
+
+  .about-contact:hover {
+    opacity: 0.65;
+  }
+
+  .about-visual {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .visual-base {
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    background:
+      linear-gradient(180deg, #251f34 0%, #3d2f69 100%);
+    box-shadow: 0 24px 55px rgba(33, 24, 60, 0.18);
+    overflow: hidden;
+  }
+
+  .visual-base::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, transparent 0 18%, rgba(125, 79, 255, 0.2) 18.4%, transparent 19%),
+      linear-gradient(135deg, transparent 0 42%, rgba(125, 79, 255, 0.15) 42.4%, transparent 43%),
+      linear-gradient(135deg, transparent 0 68%, rgba(125, 79, 255, 0.15) 68.4%, transparent 69%);
+    pointer-events: none;
+  }
+
+  .id-card-image {
+    position: absolute;
+    right: -1.25rem;
+    bottom: -1.1rem;
+    border-radius:20px;
+    width: min(330px, 92%);
+    height: auto;
+    display: block;
+    z-index: 2;
+    object-fit: contain;
+    filter: drop-shadow(0 22px 40px rgba(17, 19, 21, 0.18));
+    transform: rotate(4deg);
+  }
+
+  @media (min-width: 1024px) {
+    .about-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(420px, 0.95fr);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .about-entry {
+      margin-top: 0;
+    }
+
+    .about-visual {
+      min-height: 430px;
+    }
+
+    .id-card-image {
+      right: -0.4rem;
+      bottom: -0.8rem;
+      width: min(380px, 92%);
+    }
+  }
+
+  @media (max-width: 720px) {
+    .about-shell {
+      padding: 1rem;
+      border-radius: 22px;
+    }
+
+    .about-heading {
+      max-width: none;
+      font-size: clamp(2rem, 10vw, 3.2rem);
+    }
+
+    .about-copy {
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    .about-visual {
+      min-height: auto;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 0.4rem;
+    }
+
+    .visual-base {
+      display: none;
+    }
+
+    .id-card-image {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      width: min(180px, 52vw);
+      transform: none;
+      border-radius: 18px;
+    }
+  }
+
+  :global(html[data-theme="dark"]) .about-shell {
+    background: linear-gradient(180deg, rgba(17, 19, 24, 0.94) 0%, rgba(13, 15, 20, 0.92) 100%);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  }
+
+  :global(html[data-theme="dark"]) .about-heading,
+  :global(html[data-theme="dark"]) .about-contact {
+    color: #f3eee7;
+  }
+
+  :global(html[data-theme="dark"]) .about-copy {
+    color: #aeb6b0;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .about-heading,
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .about-contact {
+    color: #111315;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .about-copy {
+    color: #5d625d;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .about-shell {
+    background: linear-gradient(180deg, rgba(17, 19, 24, 0.94) 0%, rgba(13, 15, 20, 0.92) 100%);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .about-heading,
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .about-contact {
+    color: #f3eee7;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .about-copy {
+    color: #aeb6b0;
+  }
+</style>

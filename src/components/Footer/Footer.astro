@@ -1,29 +1,242 @@
 ---
-import myPhoto from "../../assets/images/mes.jpeg";
-import email from "../../assets/icons/social-media/gmail-light.svg";
-import twitter from "../../assets/icons/social-media/twitter.svg";
-import SocialMedia from "./SocialMedia";
-import { IconBrandX } from "@tabler/icons-react";
+import cvFile from "../../assets/file/CVREKSAPRAYOGAS(ENG).pdf";
+import { dataLogoSocialMedia } from "../../constants";
+
+const currentYear = new Date().getFullYear();
 ---
 
-<section
-  id="contact"
-  style="background:rgba(24, 19, 60, 1)"
-  class=" py-10"
->
-<center>
-  <span class="md:text-lg text-sm md:font-medium">
-    © <span class="date">2024</span>, by Reksa Prayoga Syahputra
-    </span
-  >
-  <SocialMedia client:visible />
+<footer id="contact" class="section-block scroll-mt-32 pb-8">
+  <div class="surface-card-dark footer-shell p-6 md:p-10">
+    <div class="grid gap-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
+      <div>
+        <span class="section-kicker footer-kicker">Contact</span>
+        <h2 class="section-heading mt-6 footer-heading">Open to thoughtful product work, long-term collaboration, and selected opportunities.</h2>
+        <p class="footer-copy mt-5 max-w-2xl text-sm leading-7 md:text-base md:leading-8">
+          Available for freelance, contract, and full-time work involving websites, dashboards, internal platforms,
+          and API-driven products.
+        </p>
+      </div>
 
-</center>
-</section>
-<script>
-  const twitterButton: HTMLElement = document.getElementById("twitter-btn")!;
+      <div class="grid gap-3">
+        <a
+          href="mailto:reksa.prayoga1012@gmail.com"
+          class="button-primary justify-center"
+        >
+          Email me
+        </a>
+        <a
+          href="https://api.whatsapp.com/send?phone=62895331493506&text=Halo%20Reksa"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button-secondary dark-button justify-center"
+        >
+          WhatsApp
+        </a>
+        <a href={cvFile} download="CVREKSAPRAYOGAS(ENG).pdf" class="button-secondary dark-button justify-center">
+          Download CV
+        </a>
+      </div>
+    </div>
 
-  twitterButton.addEventListener("click", () => {
-    window.location.href = "https://x.com/KICODE3";
-  });
-</script>
+    <div class="footer-meta mt-8 flex flex-wrap items-center justify-between gap-4 pt-6">
+      <p class="footer-meta-copy text-sm">© {currentYear} Reksa Prayoga Syahputra. Fullstack Developer.</p>
+
+      <div class="flex flex-wrap items-center gap-3">
+        {
+          dataLogoSocialMedia.map(({ logo, navigate, label }) => (
+            <a
+              href={navigate}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-social grid h-11 w-11 place-items-center rounded-[16px] transition duration-200 hover:-translate-y-0.5"
+              aria-label={label ?? "Social media link"}
+            >
+              <img src={logo} alt={label ?? "Social icon"} class="h-5 w-5 object-contain" loading="lazy" decoding="async" />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-shell {
+    background:
+      radial-gradient(circle at top right, rgba(94, 75, 245, 0.18), transparent 26%),
+      linear-gradient(180deg, #15171b 0%, #0f1012 100%);
+    color: #f8f4ed;
+  }
+
+  .footer-kicker {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .footer-heading {
+    color: #ffffff;
+  }
+
+  .footer-copy {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .footer-meta {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-meta-copy {
+    color: rgba(255, 255, 255, 0.52);
+  }
+
+  .footer-social {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .footer-social:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  :global(html[data-theme="dark"]) .footer-shell {
+    background:
+      radial-gradient(circle at top right, rgba(94, 75, 245, 0.16), transparent 24%),
+      linear-gradient(180deg, #fcfbf8 0%, #f4f0ea 100%);
+    color: #111315;
+    border-color: rgba(17, 19, 21, 0.08);
+    box-shadow: 0 22px 52px rgba(17, 19, 21, 0.08);
+  }
+
+  :global(html[data-theme="dark"]) .footer-kicker {
+    border-color: rgba(17, 19, 21, 0.08);
+    background: rgba(255, 255, 255, 0.6);
+    color: rgba(17, 19, 21, 0.62);
+  }
+
+  :global(html[data-theme="dark"]) .footer-heading {
+    color: #111315;
+  }
+
+  :global(html[data-theme="dark"]) .footer-copy {
+    color: rgba(17, 19, 21, 0.68);
+  }
+
+  :global(html[data-theme="dark"]) .footer-meta-copy {
+    color: rgba(17, 19, 21, 0.52);
+  }
+
+  :global(html[data-theme="dark"]) .footer-meta {
+    border-top-color: rgba(17, 19, 21, 0.08);
+  }
+
+  :global(html[data-theme="dark"]) .footer-social {
+    border-color: rgba(17, 19, 21, 0.08);
+    background: rgba(17, 19, 21, 0.04);
+  }
+
+  :global(html[data-theme="dark"]) .footer-shell .dark-button {
+    border-color: rgba(17, 19, 21, 0.1);
+    background: rgba(17, 19, 21, 0.04);
+    color: #111315;
+  }
+
+  :global(html[data-theme="dark"]) .footer-shell .dark-button:hover,
+  :global(html[data-theme="dark"]) .footer-social:hover {
+    background: rgba(17, 19, 21, 0.08);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .footer-shell {
+    background:
+      radial-gradient(circle at top right, rgba(94, 75, 245, 0.18), transparent 26%),
+      linear-gradient(180deg, #15171b 0%, #0f1012 100%);
+    color: #f8f4ed;
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-strong);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .footer-kicker {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .footer-heading {
+    color: #ffffff;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .footer-copy {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .footer-meta-copy {
+    color: rgba(255, 255, 255, 0.52);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .footer-meta {
+    border-top-color: rgba(255, 255, 255, 0.1);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .footer-social {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .footer-shell .dark-button {
+    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fffaf1;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .footer-shell .dark-button:hover,
+  :global(.theme-snapshot-overlay[data-snapshot-theme="light"]) .footer-social:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .footer-shell {
+    background:
+      radial-gradient(circle at top right, rgba(94, 75, 245, 0.16), transparent 24%),
+      linear-gradient(180deg, #fcfbf8 0%, #f4f0ea 100%);
+    color: #111315;
+    border-color: rgba(17, 19, 21, 0.08);
+    box-shadow: 0 22px 52px rgba(17, 19, 21, 0.08);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .footer-kicker {
+    border-color: rgba(17, 19, 21, 0.08);
+    background: rgba(255, 255, 255, 0.6);
+    color: rgba(17, 19, 21, 0.62);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .footer-heading {
+    color: #111315;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .footer-copy {
+    color: rgba(17, 19, 21, 0.68);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .footer-meta-copy {
+    color: rgba(17, 19, 21, 0.52);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .footer-meta {
+    border-top-color: rgba(17, 19, 21, 0.08);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .footer-social {
+    border-color: rgba(17, 19, 21, 0.08);
+    background: rgba(17, 19, 21, 0.04);
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .footer-shell .dark-button {
+    border-color: rgba(17, 19, 21, 0.1);
+    background: rgba(17, 19, 21, 0.04);
+    color: #111315;
+  }
+
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .footer-shell .dark-button:hover,
+  :global(.theme-snapshot-overlay[data-snapshot-theme="dark"]) .footer-social:hover {
+    background: rgba(17, 19, 21, 0.08);
+  }
+</style>

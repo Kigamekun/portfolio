@@ -17,10 +17,10 @@ function Item({ title, no, projects, badges }) {
   });
 
   const opacity = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
-  const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
-  const translateY = useTransform(scrollYProgress, [0, 1], [-120, 140]);
-  const rotateX = useTransform(scrollYProgress, [0, 1], [25, 0]);
-  const rotateY = useTransform(scrollYProgress, [0, 1], [-10, 0]);
+  const scale = useTransform(scrollYProgress, [1, 1], [1, 1]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [0, 0]);
+  const rotateX = useTransform(scrollYProgress, [0, 1], [0, 0]);
+  const rotateY = useTransform(scrollYProgress, [0, 0], [0, 0]);
 
   const transform = useTransform(
     [scrollYProgress],

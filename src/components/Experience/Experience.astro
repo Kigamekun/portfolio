@@ -1,30 +1,58 @@
 ---
-import shapeLight from "../../assets/images/shape-experience.svg";
-import vectorExperience from "../../assets/icons/vector-experience.svg";
+import { dataExperience } from "../../constants";
 
-import DataExperience from "./DataExperience";
+const experienceCards = dataExperience.map((item) => ({
+  ...item,
+  summary: item.responsibilites.slice(0, 3).join(" "),
+}));
 ---
 
-<section id="experience" style="background:rgba(24, 19, 60, 1)">
-  <div class="dots" style={{
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    backgroundImage: "radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
-    backgroundSize: "30px 30px",
-    opacity: 0.5,
-  }}></div>
-  <div class="max-w-7xl m-auto px-5 py-14">
-    <div class="flex justify-center flex-col items-center gap-5">
-      <div class="relative md:w-[580px] w-[307px]">
-        <h2 class="relative z-10 md:text-[56px] text-[30px] md:text-left font-bold">🏢 Work Experiences</h2>
-    
-      </div>
-      <p class="xl:text-2xl md:text-base text-sm xl:leading-9 text-center text-medium xl:max-w-[65rem] text-[#98A0AC]">
-        As a dedicated Fullstack Developer, I have had the privilege of working on various projects that have honed my skills and enriched my experience. Here are some of the key milestones in my professional journey.
+<section id="experience" class="section-block scroll-mt-32">
+  <div class="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+    <div class="surface-card p-6 md:sticky md:top-28 md:p-8">
+      <span class="section-kicker">Experience</span>
+      <h2 class="section-heading mt-6">Experience across product, agency, and founder-led delivery.</h2>
+      <p class="mt-5 text-sm leading-7 text-[var(--muted)] md:text-base md:leading-8">
+        Each role strengthened a different part of my practice, from backend architecture and fullstack execution to
+        technical ownership and delivery across real-world products.
       </p>
     </div>
 
-    <DataExperience client:visible />
+    <div class="grid gap-5">
+      {
+        experienceCards.map((experience, index) => (
+          <article
+            class="overflow-hidden rounded-[32px] border p-6 text-white shadow-[0_24px_60px_rgba(15,17,19,0.12)] md:p-8"
+            style={`background: radial-gradient(circle at top right, ${experience.second_color} 0%, ${experience.first_color} 55%); border-color: ${experience.border_color};`}
+          >
+            <div class="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+              <div class="flex items-start gap-4">
+                <span class="inline-flex h-12 w-12 items-center justify-center rounded-[18px] bg-white/10 text-sm font-extrabold tracking-[0.18em] text-white/86">
+                  0{index + 1}
+                </span>
+                <div>
+                  <p class="text-[0.74rem] font-bold uppercase tracking-[0.18em] text-white/58">{experience.date}</p>
+                  <h3 class="mt-2 text-[1.9rem] font-bold tracking-[-0.05em]">{experience.name}</h3>
+                  <p class="mt-2 text-sm font-semibold text-white/76">{experience.description}</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 md:justify-end">
+                <div class="flex h-14 min-w-[72px] items-center justify-center rounded-[20px] border border-white/10 bg-white/8 px-4">
+                  <img src={experience.logo_url} alt={experience.name} class="max-h-9 w-auto object-contain" loading="lazy" decoding="async" />
+                </div>
+                <span class="glass-badge rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-white/92">
+                  {experience.position}
+                </span>
+              </div>
+            </div>
+
+            <p class="mt-6 text-justify text-sm leading-8 text-white/82 md:text-base">
+              {experience.summary}
+            </p>
+          </article>
+        ))
+      }
+    </div>
   </div>
 </section>
